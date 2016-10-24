@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      {{#each model.artists as |artist|}}
+        <div>
+          {{#link-to 'artists.artist' artist.id}}
+            {{artist.name}}
+          {{/link-to}}
+        </div>
+      {{/each}}
+    </div>
+    <div class="col-md-4">
+      {{outlet}}
+    </div>
+    <div class="col-md-4">
+      <br>
+      <br>
+      {{#link-to 'artists.new'}}
+         <button class="btn btn-info">Create Artists</button>
+      {{/link-to}}
+    </div>
+  </div>
+</div>
